@@ -15,7 +15,7 @@ The gallery shortcodes can be handwritten using IDs, or inserted into a page usi
 	<div id="gallery-1" class="gallery galleryid-728 gallery-columns-1 gallery-size-medium">
 	  <dl class="gallery-item">
 		  <dt class="gallery-icon landscape">
-				<img src="http://www.eatsleepknit.co.uk/wp-content/uploads/2015/05/11202903_447097558806150_1536473151_n-640x640.jpg">
+				<img src="http://www.eatsleepknit.co.uk/wp-content/uploads/2015/05/11202903.jpg">
 			</dt>
 		</dl>
 	</div>
