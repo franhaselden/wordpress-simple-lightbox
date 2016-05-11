@@ -8,7 +8,7 @@ Rather than dealing with a bulky-looking lightbox or modal pop-up, I simply crea
 
 It really is no frills. See it in action by clicking on pictures in the main article here: http://www.eatsleepknit.co.uk/butterick-6185-collared-blouse-review/
 
-## How it works
+## How the HTML looks
 
 The gallery shortcodes can be handwritten using IDs, or inserted into a page using the Wordpress media uploader. Just select however many gallery images you want on the page in one set and insert. This inserts a div with the class `gallery` which all image elements are nested into.
 
@@ -19,3 +19,15 @@ The gallery shortcodes can be handwritten using IDs, or inserted into a page usi
 			</dt>
 		</dl>
 	</div>
+	
+My code firstly gives the image a class of `gallery-icon` on the image wrapper. This means I can add a little magnifying class icon to let the user know they can zoom.
+
+Importantly, embedded into all post pages is a modal pop-up div ready for content to be loaded in, which is hidden by default:
+
+	<div class="modal-wrap" style="display:none;">
+	  <div class="gallery-modal"></div>
+	</div>
+
+## Javascript listener
+
+
