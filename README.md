@@ -28,6 +28,26 @@ Importantly, embedded into all post pages is a modal pop-up div ready for conten
 	  <div class="gallery-modal"></div>
 	</div>
 
-## Javascript listener
+## jQuery listener
 
+An event listener listens for the click of a `.gallery-item` element. Once clicked, the clicked image info is gathered and inserted into the `.gallery-modal` div. Then jQuery animates the div to fade in.
 
+	$( "dl.gallery-item").click(function() {
+	  var img = $(this).html();
+	  var img = img.replace('<dt class="gallery-icon portrait">','');
+	  var img = img.replace('<dt class="gallery-icon landscape">','');
+	  var img = img.replace('</dt>','');
+	  $(".gallery-modal").html(img);
+	  $(".modal-wrap").fadeIn( "slow", function() {});
+	
+	});
+
+## Closing the modal pop-up
+
+The modal pop-up has no specific "close" button, instead the user can click on the background of the page to close. This is a standard and expected behaviour and is intuitive for most users. Clicking the background causes the `.modal-wrap` to be faded out from view.
+
+	$('#page-wrap').on('click', '.modal-wrap', function() {
+	  $(".modal-wrap").fadeOut( "slow", function() {});
+	});
+	
+And that's it! No heavyweight plugins added, no weighing down the site with unused features and clunky graphics. Just click to zoom.
